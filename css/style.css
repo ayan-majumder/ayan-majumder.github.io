@@ -1,0 +1,519 @@
+/*--------------------global css----------------------*/
+body,html{
+	font-family: 'Montserrat',sans-serif;
+	padding: 0;
+	margin:0;
+}
+
+h3{
+	font-size: 48px;
+	font-weight: 800;
+	color: rgba(252,70,107,1);
+	font-family: 'Montserrat', sans-serif;
+	padding-bottom: 20px;
+	position: relative;
+	margin-bottom: 20px;
+}
+
+h3:before{
+	content: '';
+	position: absolute;
+	width: 50px;
+	height: 7px;
+	background-color: rgba(252,70,107,1);
+	bottom: 0px;
+	left: 0;
+	border-radius: 50px;
+	animation-name: to_and_fro;
+	animation-iteration-count: infinite;
+	animation-duration: 5s;
+	animation-timing-function: ease-in-out;
+}
+
+@keyframes to_and_fro{
+	0%{
+		left: 0;
+	}
+	50%{
+		left: 50px;
+	}
+	100%{
+		left: 0;
+	}
+}
+
+.text-description{
+	color: #555555;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	font-size: 20px;
+}
+
+#illustrator,#uiux,#skills,#contact,#footer{
+	padding-top: 120px;
+}
+
+input[type="text"],textarea,input[type="email"]{
+	width: 100%;
+	height: 36px;
+	border:0;
+	background-color: #ffffff;
+	padding: 10px;
+	padding-right: 40px;
+	border-radius: 4px;
+	border: 2px solid #d6d6d6;
+}
+textarea{
+	height: 72px;
+}
+
+.icon{
+	font-style: normal;
+	font-family: 'FontAwesome';
+	font-size: 20px;
+}
+.icon-heart{
+	width: 20px;
+	height: 20px;
+}
+.icon-heart:before{
+	content: '\f004';
+	color: rgba(252,70,107,1);
+}
+/*--------------------home section start---------------------*/
+#home{
+	height: 100vh;
+	width: 100%;
+	position: relative;
+	background-image: url('../images/banner-dackdrop.svg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-bottom: 40px;
+}
+#home .banner-text-wrapper {
+  width: 50%;
+  padding-top: 120px;
+}
+#home .banner-image-wrapper {
+  width: 75%;
+  padding-left: 40px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+#home .banner-text-wrapper h1{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 82px;
+	cursor: pointer;
+	font-weight: 800;
+	color: rgba(252,70,107,1);
+	background-image: linear-gradient(to bottom left, #7303c0, #ec38bc,rgba(252,70,107,1), rgba(63,94,251,1));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-size: auto 400%;
+	background-position: 0 100%;
+	transition: background-position 0.5s;
+}
+
+#home .banner-text-wrapper h1:hover{
+background-position: 0 0;
+}
+
+#home .banner-text-wrapper h2{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 30px;
+	font-weight: 500;
+	line-height: 1.2;
+	color: #555555;
+	position: relative;
+}
+
+#home .banner-text-wrapper .banner-button{
+	padding: 15px 30px;
+	font-size: 16px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 500;
+	color: white;
+	text-transform: uppercase;
+	margin-top: 20px;
+	border: 0;
+	background-color: rgba(252,70,107,1);
+	transition-duration: 1s;
+	border-radius: 100px;
+	/*background-image: linear-gradient(to bottom left, rgba(252,70,107,1), rgba(63,94,251,1));*/
+}
+
+#home .banner-text-wrapper .banner-button:hover{
+	background-color: rgba(63,94,251,1);
+}
+
+/*-------------------end of home section------------------*/
+
+/* ------------------illustrator section start-----------------*/
+
+#illustrator .text_col{
+	padding-left: 40px;
+}
+
+/*-------------------end of illustrator section----------------*/
+
+/*-------------------start of uiux section---------------------*/
+#uiux .text_col{
+	padding-right: 40px;
+}
+
+#uiux .image-col{
+	padding-top: 40px;
+}
+/*--------------------end of uiux section-----------------------*/
+
+
+/*--------------------start skills section----------------------*/
+#skills .image-col{
+	padding: 40px 30px 0px 90px;
+}
+
+.skillbar {
+	position:relative;
+	display:block;
+	margin-bottom:15px;
+	width:100%;
+	background:#eee;
+	height:25px;
+	border-radius:50px;
+	-moz-border-radius:50px;
+	-webkit-border-radius:50px;
+	-webkit-transition:0.4s linear;
+	-moz-transition:0.4s linear;
+	-ms-transition:0.4s linear;
+	-o-transition:0.4s linear;
+	transition:0.4s linear;
+	-webkit-transition-property:width, background-color;
+	-moz-transition-property:width, background-color;
+	-ms-transition-property:width, background-color;
+	-o-transition-property:width, background-color;
+	transition-property:width, background-color;
+}
+
+.skillbar-title {
+	position:absolute;
+	top:0;
+	left:-10px;
+	width:115px;
+	font-weight:bold;
+	font-size:13px;
+	color:#ffffff;
+	background:#6adcfa;
+	-webkit-border-top-left-radius:50px;
+	-webkit-border-bottom-left-radius:50px;
+	-moz-border-radius-topleft:50px;
+	-moz-border-radius-bottomleft:50px;
+	border-top-left-radius:50px;
+	border-bottom-left-radius:50px;
+}
+
+.skillbar-title span {
+	display:block;
+	background:rgba(0, 0, 0, 0.1);
+	padding:0 20px;
+	height:25px;
+	line-height:25px;
+	-webkit-border-top-left-radius:50px;
+	-webkit-border-bottom-left-radius:50px;
+	-moz-border-radius-topleft:50px;
+	-moz-border-radius-bottomleft:50px;
+	border-top-left-radius:50px;
+	border-bottom-left-radius:50px;
+}
+
+.skillbar-bar {
+	height:25px;
+	width:0px;
+	background:#6adcfa;
+	border-radius:50px;
+	-moz-border-radius:50px;
+	-webkit-border-radius:50px;
+}
+
+.skill-bar-percent {
+	position:absolute;
+	right:10px;
+	top:0;
+	font-size:11px;
+	height:25px;
+	line-height:25px;
+	color:#ffffff;
+	font-weight: 600;
+	color:rgba(0, 0, 0, 0.7);
+}
+
+/*---------------------end skills section----------------------*/
+
+/*-----------------------start contact section--------------------*/
+
+#contact .text_col{
+	padding-left: 40px;
+}
+
+#contact .image-col{
+	padding-top: 70px;
+}
+
+#contact .text_col .contact_form{
+	width: 100%;
+	height: auto;
+	padding: 20px;
+	border-radius: 6px;
+	border-bottom-right-radius: 0;
+	background-color: #eeeeee;
+}
+
+#contact .text_col .contact_form .form_elements{
+	width: 100%;
+}
+
+#contact .text_col .contact_form .form_elements .element{
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+#contact .text_col .contact_form .form_elements .element:last-child{
+	margin-bottom: 0;
+}
+
+#contact .text_col .button_group{
+	float: right;
+	padding: 0 20px 20px 0;
+	background-color: #eeeeee;
+	border-bottom-right-radius: 40px;
+	position: relative;
+}
+
+#contact .text_col .button_group:before{
+	content: '';
+	width: 0;
+	height: 0;
+	position: absolute;
+	left: -63px;
+	top:0;
+	border-style: solid;
+	border-width: 0 63px 63px 0;
+	border-color: transparent #eeeeee transparent transparent;
+}
+
+
+#contact .text_col .button_group .send{
+	padding: 10px 30px 10px 50px;
+	font-size: 16px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 500;
+	color: white;
+	text-transform: uppercase;
+	border: 0;
+	background-color: rgba(252,70,107,1);
+	transition-duration: 1s;
+	border-radius: 100px;
+	position: relative;
+}
+
+#contact .text_col .button_group .send:hover{
+	background-color: rgba(63,94,251,1);
+}
+
+#contact .text_col .button_group .send:before{
+	content: '\f1d8';
+	font-family: 'FontAwesome';
+	top: 3px;
+	font-size: 22px;
+	position: absolute;
+	left: 10px;
+	color: #ffffff;
+}
+
+
+.contact_form .form_elements .element{
+	position: relative;
+}
+
+.contact_form .form_elements .element:before{
+	font-family: 'FontAwesome';
+	font-size: 20px;
+	color: #dddddd;
+	position: absolute;
+}
+
+.contact_form .form_elements .element.email:before{
+	content: '\f003';
+	top: 3px;
+	right: 10px;
+}
+
+.contact_form .form_elements .element.name:before{
+	content: '\f007';
+	top: 3px;
+	right: 12px;
+}
+
+/*.contact_form .form_elements .element.subject:before{
+	content: '\f044';
+	top: 3px;
+	right: 10px;
+}
+
+.contact_form .form_elements .element.message:before{
+	content: '\f075';
+	top: 3px;
+	right: 10px;
+}*/
+
+/*---------------end of contact section---------------*/
+
+/*--------------------start of footer---------------------*/
+
+#footer .footer_wrap{
+	background-color: #161616;
+	padding-top: 40px;
+	position: relative;
+}
+
+#footer .footer_left{
+	text-align: center;
+}
+
+#footer .footer_left .img_wrapper{
+	max-width: 75%;
+	margin:0 auto;
+}
+
+#footer .footer_left .text_wrapper{
+	padding-top: 20px;
+}
+
+#footer .footer_left .text_wrapper p{
+	color: #ffffff;
+	font-size: 14px;
+	font-weight: 400;
+	margin:0;
+	padding-bottom: 0px;
+}
+
+#footer .footer_left .text_wrapper p.bold{
+	font-weight: 500;
+	font-size: 18px;
+}
+
+#footer .footer_left .text_wrapper p.light{
+	font-weight: 300;
+}
+
+#footer .footer_mid{
+	padding-left: 20px;
+}
+
+#footer .footer_mid .contact_details p, #footer .footer_mid .contact_details label{
+	color: #ffffff;
+	font-size: 16px;
+	padding-top: 10px;
+	font-weight: 500;
+	margin: 0;
+	line-height: 1;
+}
+
+#footer .footer_mid .contact_details a{
+	text-decoration: none;
+	transition: 0.3s;
+}
+
+#footer .footer_mid .contact_details a:hover{
+	color: rgba(252,70,107,1);
+}
+
+#footer .footer_mid .contact_details label{
+	padding-right: 10px;
+}
+
+#footer .footer_mid .contact_details span{
+	padding: 0 10px;
+}
+
+#footer .footer_mid h4, #footer .footer_right h4 {
+	color: #ffffff;
+	font-weight: 700;
+	font-size: 28px;
+	padding-bottom: 10px;
+	position: relative;
+}
+
+#footer .footer_mid h4:before, #footer .footer_right h4:before{
+	content: '';
+	width: 50px;
+	height: 5px;
+	bottom: 0;
+	left: 0;
+	background-color: #ffffff;
+	border-radius: 50px;
+	position: absolute;
+}
+
+#footer .footer_right .social_wrap ul{
+	list-style: none;
+	text-decoration: none;
+	padding: 0;
+	margin:0;
+	padding-top: 20px;
+}
+
+#footer .footer_right .social_wrap ul li{
+	display: inline-block;
+	margin-right: 20px;
+}
+
+#footer .footer_right .social_wrap ul li:last-child{
+	margin-right: 0;
+}
+
+#footer .footer_right .social_wrap ul li .fa{
+	font-size: 32px;
+	color: white;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+/*#footer .footer_right .social_wrap ul li .fa.fa-facebook:hover{
+	color: #3B5998;
+}
+
+#footer .footer_right .social_wrap ul li .fa.fa-instagram:hover{
+	color: #fb3958;
+}
+
+#footer .footer_right .social_wrap ul li .fa.fa-behance:hover{
+	color: #3B5998;
+}
+
+#footer .footer_right .social_wrap ul li .fa.fa-github:hover{
+	color: #fb3958;
+}*/
+
+#footer .copyright{
+	padding-bottom: 20px;
+}
+#footer .copyright p{
+	text-align: center;
+	margin:0;
+	color: rgba(255,255,255,0.7);
+}
+
+#footer .scroll_top{
+	font-size: 100px;
+	color: #ffffff;
+	position: absolute;
+	bottom:30px;
+	right: 60px;
+	width: 100px;
+	height: 100px;
+	text-align: center;
+	line-height: 0;
+}
