@@ -10,7 +10,6 @@ $(window).scroll(function(){
         return ((elemTop <= docViewBottom) && (elemTop >= docViewTop));
     }
      
-    // This is where we use the function to detect if ".box2" is scrolled into view, and when it is add the class ".animated" to the <p> child element
     if(elementScrolled('.skillbar-wrapper')) {
     	   		console.log('here');
       	jQuery('.skillbar').each(function(){
@@ -21,15 +20,8 @@ $(window).scroll(function(){
     }
 });
 
-// $("#scoll_top").click(function () {
-//    //1 second of animation time
-//    //html works for FFX but not Chrome
-//    //body works for Chrome but not FFX
-//    //This strange selector seems to work universally
-//    $("html, body").animate({scrollTop: 0}, 1000);
-// });
-
 $(document).ready(function(){
+	new WOW().init(); //initiate wow js
 
     //Check to see if the window is top if not then display button
     $(window).scroll(function(){
@@ -46,4 +38,14 @@ $(document).ready(function(){
         return false;
     });
 
+	$(window).bind('scroll', function(){
+	    var fadeStart=0,fadeUntil=700,fading = $('#home');
+	    var offset = $(document).scrollTop(),opacity=0;
+	    if( offset<=fadeStart ){
+	        opacity=1;
+	    }else if( offset<=fadeUntil ){
+	        opacity=1-offset/fadeUntil;
+	    }
+	    fading.css('opacity',opacity);
+	});
 });

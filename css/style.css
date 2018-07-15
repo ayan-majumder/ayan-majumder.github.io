@@ -1,15 +1,15 @@
 /*--------------------global css----------------------*/
 body,html{
-	font-family: 'Montserrat',sans-serif;
+	font-family: 'Nunito',sans-serif;
 	padding: 0;
 	margin:0;
+	overflow-x: hidden;
 }
 
 h3{
 	font-size: 48px;
 	font-weight: 800;
 	color: rgba(252,70,107,1);
-	font-family: 'Montserrat', sans-serif;
 	padding-bottom: 20px;
 	position: relative;
 	margin-bottom: 20px;
@@ -44,7 +44,6 @@ h3:before{
 
 .text-description{
 	color: #555555;
-	font-family: 'Montserrat', sans-serif;
 	font-weight: 400;
 	font-size: 20px;
 }
@@ -89,6 +88,7 @@ textarea{
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-attachment: fixed;
 	padding-bottom: 40px;
 }
 #home .banner-text-wrapper {
@@ -104,8 +104,9 @@ textarea{
 }
 
 #home .banner-text-wrapper h1{
-	font-family: 'Montserrat', sans-serif;
 	font-size: 82px;
+	line-height: 1;
+	margin-bottom: 0;
 	cursor: pointer;
 	font-weight: 800;
 	color: rgba(252,70,107,1);
@@ -122,7 +123,6 @@ background-position: 0 0;
 }
 
 #home .banner-text-wrapper h2{
-	font-family: 'Montserrat', sans-serif;
 	font-size: 30px;
 	font-weight: 500;
 	line-height: 1.2;
@@ -133,7 +133,6 @@ background-position: 0 0;
 #home .banner-text-wrapper .banner-button{
 	padding: 15px 30px;
 	font-size: 16px;
-	font-family: 'Montserrat', sans-serif;
 	font-weight: 500;
 	color: white;
 	text-transform: uppercase;
@@ -151,24 +150,62 @@ background-position: 0 0;
 
 /*-------------------end of home section------------------*/
 
-/* ------------------illustrator section start-----------------*/
-
-#illustrator .text_col{
-	padding-left: 40px;
-}
-
-/*-------------------end of illustrator section----------------*/
-
 /*-------------------start of uiux section---------------------*/
 #uiux .text_col{
 	padding-right: 40px;
 }
 
-#uiux .image-col{
-	padding-top: 40px;
+#uiux .text_col {
+	position: relative;
 }
+
+/*#uiux {
+	position: relative;
+}*/
+
+/*#uiux .patch_1{
+	position: absolute;
+	z-index: 2;
+	top: 100px;
+	width: 30%;
+	opacity: 0.1;
+	left: -100px;
+}
+*/
+/*#uiux .circle .inner_circle{
+	transform: translateZ(50px);
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	border-radius: 50%;
+	z-index: 3;
+	top: 200px;
+	position: absolute;
+	left: 200px;
+	border: 10px solid  rgba(252,70,107,0.1);
+}*/
+
 /*--------------------end of uiux section-----------------------*/
 
+/* ------------------illustrator section start-----------------*/
+
+/*#illustrator{
+	position: relative;
+}*/
+
+#illustrator .text_col{
+	padding-left: 40px;
+}
+
+/*#illustrator .patch_2{
+	width: 30%;
+	opacity: 0.1;
+	position: absolute;
+	right: -100px;
+	bottom: -70px;
+}
+*/
+/*-------------------end of illustrator section----------------*/
 
 /*--------------------start skills section----------------------*/
 #skills .image-col{
@@ -219,7 +256,7 @@ background-position: 0 0;
 	background:rgba(0, 0, 0, 0.1);
 	padding:0 20px;
 	height:25px;
-	line-height:25px;
+	line-height:26px;
 	-webkit-border-top-left-radius:50px;
 	-webkit-border-bottom-left-radius:50px;
 	-moz-border-radius-topleft:50px;
@@ -307,7 +344,6 @@ background-position: 0 0;
 #contact .text_col .button_group .send{
 	padding: 10px 30px 10px 50px;
 	font-size: 16px;
-	font-family: 'Montserrat', sans-serif;
 	font-weight: 500;
 	color: white;
 	text-transform: uppercase;
@@ -325,10 +361,10 @@ background-position: 0 0;
 #contact .text_col .button_group .send:before{
 	content: '\f1d8';
 	font-family: 'FontAwesome';
-	top: 3px;
+	top: 5px;
 	font-size: 22px;
 	position: absolute;
-	left: 10px;
+	left: 15px;
 	color: #ffffff;
 }
 
